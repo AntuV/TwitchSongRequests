@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS preferences (
     id TEXT PRIMARY KEY,
-    `explicit` BOOLEAN NULL,
+    explicit BOOLEAN NULL,
     reward_id TEXT NULL,
     last_updated DATE NULL,
     max_song_length INT NULL
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS preferences (
 CREATE TABLE IF NOT EXISTS messages (
     id SERIAL PRIMARY KEY,
     created_at DATE NULL,
-    success TINYINT NULL,
+    success BOOLEAN NULL,
     broadcaster_id TEXT NULL,
     spotify_track TEXT NULL
 );
